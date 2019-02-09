@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
-package com.lorentzos.swipecards;
+
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,12 +18,10 @@ import com.lorentzos.flingswipe.SwipeFlingAdapterView;
 
 import java.util.ArrayList;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
-import butterknife.OnClick;
 
 
-public class Swipe_Screen extends Activity {
+
+public class Swipe_Screen extends AppCompatActivity {
 
     private ArrayList<String> al;
     private ArrayAdapter<String> arrayAdapter;
@@ -49,7 +47,7 @@ public class Swipe_Screen extends Activity {
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.helloText, al );
 
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
-        SwipeFlingAdapterView.setAdapter(arrayAdapter);
+        flingContainer.setAdapter(arrayAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
             public void removeFirstObjectInAdapter() {
