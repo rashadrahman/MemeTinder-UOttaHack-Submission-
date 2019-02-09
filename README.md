@@ -1,1 +1,1 @@
-# MemeTinder-UOttaHack-Submission-
+# MemeTinder *UOttaHack-Submission*
