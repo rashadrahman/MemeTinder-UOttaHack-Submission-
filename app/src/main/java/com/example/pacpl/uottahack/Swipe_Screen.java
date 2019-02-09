@@ -1,8 +1,10 @@
 package com.example.pacpl.uottahack;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.ImageView;
 
 
@@ -94,7 +96,19 @@ public class Swipe_Screen extends AppCompatActivity {
             }
         });
 
+        Button button=(Button)findViewById(R.id.profilebtn);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Intent i = new Intent(getApplicationContext(),Profile.class);
+                startActivity(i);
+            }
+        });
     }
+
+
 
 
 
